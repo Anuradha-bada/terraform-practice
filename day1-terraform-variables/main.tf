@@ -20,7 +20,7 @@ resource "aws_iam_user" "env_user" {
 resource "aws_iam_group" "env_group" {
     name = "${var.groupname}-group"
 }
-resource "aws_iam_user_group_membership" "example2" {
+resource "aws_iam_user_group_membership" "example12" {
   user = aws_iam_user.env_user.name
 
   groups = [
