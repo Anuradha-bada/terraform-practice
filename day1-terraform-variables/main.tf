@@ -1,3 +1,12 @@
+terraform {
+  backend "s3" {
+    bucket = "value"
+    region = "value"
+    key = "path/to/my/terraform.tfstate"
+    encrypt = true
+    dynamodb_endpoint = "terrafrom-lock" #(Optional) Used to enable state locking using a DynamoDB table
+  }
+}
 resource "aws_instance" "example12" {
     ami = var.ami
     instance_type = var.type
